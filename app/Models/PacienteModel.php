@@ -14,8 +14,9 @@ class PacienteModel
     //la variable $data es obtenida del formulario de registrar usuario
     public function registrarPaciente($data)
     {
-        $consulta = $this->db->query("insert into paciente (cedPaciente, nombrePaciente, apellidoPaciente, fechaNac, emailPaciente, contrasena)
-        values('" . $data['cedPaciente'] . "','" . $data['nombrePaciente'] . "','" . $data['apellidoPaciente'] . "','" . $data['fechaNac'] . "','" . $data['emailPaciente'] ."','" . $data['contrasena'] .  "');");
+        $sql = "INSERT INTO paciente (cedPaciente, nombrePaciente, apellidoPaciente, fechaNac, emailPaciente, contrasena)
+                VALUES('" . $data['cedPaciente'] . "','" . $data['nombrePaciente'] . "','" . $data['apellidoPaciente'] . "','" . $data['fechaNac'] . "','" . $data['emailPaciente'] ."','" . $data['contrasena'] .  "');";
+        $consulta = $this->db->query($sql);
         if ($consulta) {
             return true;
         } else {
@@ -26,7 +27,8 @@ class PacienteModel
     
     public function verificarPaciente($cedPaciente)
     {
-        $consulta = $this->db->query("select count(*) as contador from paciente where cedPaciente = '" . $cedPaciente . "';");
+        $sql = "SELECT count(*) as contador FROM paciente WHERE cedPaciente = '" . $cedPaciente . "';";
+        $consulta = $this->db->query($sql);
         $cantidad_pacientes = $consulta->fetch_assoc();
         if ($cantidad_pacientes['contador'] > 0) {
             return true;
@@ -37,7 +39,8 @@ class PacienteModel
 
     public function obtenerPacientes()
     {
-        $consulta = $this->db->query("select * from paciente;");
+        $sql = "SELECT * FROM paciente;";
+        $consulta = $this->db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
             $pacientes[] = $filas;
         }

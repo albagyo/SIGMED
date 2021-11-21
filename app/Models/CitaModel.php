@@ -11,24 +11,29 @@ class CitaModel
         $this->citas = array();
     }
 
-    public function guardarCita()
+    public function guardarCita($data)
     {
-        
+        $sql = "INSERT INTO cita (fecha, hora, codMedico, cedPaciente)
+                VALUES ('" .$data['fecha']. "','" .$data['hora']. "'," .$data['codMedico']. ",'" .$data['cedPaciente']. "');";
+        $consulta = $this->db->query($sql);
+    }
+
+    public function reprogramarCita($cod_cita, $fecha, $hora)
+    {
+        $sql = "UPDATE cita SET fecha ='".$fecha."', hora = '".$hora."' where codCita = ".$cod_cita.";";
+        $consulta = $this->db->query($sql);
     }
 
     public function eliminarCita($cod_cita)
     {
-        $consulta = $this->db->query("delete from cita where cod_cita= '". $cod_cita."';");
-    }
-
-    public function reprogramarCita($cod_cita)
-    {
-
+        $sql = "delete from cita where codCita= '".$cod_cita."';";
+        $consulta = $this->db->query($sql);
     }
 
     public function obtenerCitasPaciente($cod_paciente)
     {
-        $consulta = $this->db->query("select * from citas where codPaciente = '".$cod_paciente."';");
+        $sql = "select * from cita where codPaciente = ".$cod_paciente.";";
+        $consulta = $this->db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
             $citas[] = $filas;
         }
@@ -37,13 +42,11 @@ class CitaModel
 
     public function obtenerCitasMedico($cod_medico)
     {
-        $consulta = $this->db->query("select * from citas where codMedico = '".$cod_Medico."';");
+        $sql = "select * from cita where codMedico = '".$cod_medico."';";
+        $consulta = $this->db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
             $citas[] = $filas;
         }
         return $citas;
-    }
-
-
-   
+    } 
 }
