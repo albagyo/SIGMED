@@ -29,4 +29,12 @@ class MedicoModel
         }
         return $medicos;
     }
+
+    public function filtrarMedico($cod_especialidad){
+        $consulta = $this->db->query("select nombreMedico+apellidoMedico from medico where codEspecialidad='".$cod_especialidad."';");
+        while ($filas = $consulta->fetch_assoc()) {
+            $medicos[] = $filas;
+        }
+        return $medicos;
+    }
 }

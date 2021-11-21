@@ -20,4 +20,16 @@ class EspecialidadModel
         return $especialidades;
     }
     
+    //revisar join
+    public function filtrarEspecialidad($cod_policlinica){
+        $consulta = $this->db->query("select e.nombreEspecialidad from medico as m JOIN especialidad as e
+                                    on m.codEspecialidad=e.codEspecialidad JOIN policlinica as p
+                                    on p.codPoliclinica=m.codPoliclinica
+                                    where m.codPoliclinica='".$cod_policlinica."';");
+        while ($filas = $consulta->fetch_assoc()) {
+            $especialidades[] = $filas;
+        }
+        return $especialidades;
+    }
+
 }

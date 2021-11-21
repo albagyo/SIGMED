@@ -16,25 +16,33 @@ class CitaModel
         
     }
 
-    public function eliminarCita()
+    public function eliminarCita($cod_cita)
     {
-        //$consulta = $this->db->query("delete from cita where ")
+        $consulta = $this->db->query("delete from cita where cod_cita= '". $cod_cita."';");
     }
 
-    public function reprogramarCita()
+    public function reprogramarCita($cod_cita)
     {
 
     }
 
-    public function obtenerCitas()
+    public function obtenerCitasPaciente($cod_paciente)
     {
-        $consulta = $this->db->query("select * from citas;");
+        $consulta = $this->db->query("select * from citas where codPaciente = '".$cod_paciente."';");
         while ($filas = $consulta->fetch_assoc()) {
-            $medicos[] = $filas;
+            $citas[] = $filas;
         }
-        return $medicos;
+        return $citas;
     }
 
+    public function obtenerCitasMedico($cod_medico)
+    {
+        $consulta = $this->db->query("select * from citas where codMedico = '".$cod_Medico."';");
+        while ($filas = $consulta->fetch_assoc()) {
+            $citas[] = $filas;
+        }
+        return $citas;
+    }
 
 
    
