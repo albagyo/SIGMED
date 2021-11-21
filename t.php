@@ -1,0 +1,1 @@
+unregister_tick_function
