@@ -13,7 +13,8 @@ class PoliclinicaModel
 
     public function obtenerPoliclinicas()
     {
-        $consulta = $this->db->query("select * from policlinica;");
+        $sql = "SELECT * FROM policlinica;";
+        $consulta = $this->db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
             $policlinicas[] = $filas;
         }
@@ -23,7 +24,8 @@ class PoliclinicaModel
     //listar solo nombre de la policlinica
     public function listarPoliclinicas()
     {
-        $consulta = $this->db->query("select nombrePoliclinica from policlinica;");
+        $sql = "SELECT nombrePoliclinica FROM policlinica;";
+        $consulta = $this->db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
             $policlinicas[] = $filas;
         }

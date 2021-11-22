@@ -14,7 +14,8 @@ class MedicoModel
     //listar solo nombre del medico
     public function listarMedicos()
     {
-        $consulta = $this->db->query("select nombreMedico+apellidoMedico as medico from medico;");
+        $sql = "SELECT nombreMedico+apellidoMedico as medico FROM medico;";
+        $consulta = $this->db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
             $medicos[] = $filas;
         }
@@ -23,15 +24,18 @@ class MedicoModel
 
     public function obtenerMedicos()
     {
-        $consulta = $this->db->query("select * from medico;");
+        $sql = "SELECT * FROM medico;";
+        $consulta = $this->db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
             $medicos[] = $filas;
         }
         return $medicos;
     }
 
-    public function filtrarMedico($cod_especialidad){
-        $consulta = $this->db->query("select nombreMedico+apellidoMedico from medico where codEspecialidad='".$cod_especialidad."';");
+    public function filtrarMedico($cod_especialidad)
+    {
+        $sql = "SELECT nombreMedico+apellidoMedico FROM medico WHERE codEspecialidad=".$cod_especialidad.";";
+        $consulta = $this->db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
             $medicos[] = $filas;
         }
