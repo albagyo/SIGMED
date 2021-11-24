@@ -18,6 +18,8 @@ html, body {
 }
 
 </style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header>
@@ -38,37 +40,17 @@ html, body {
             <form>
                 <div class="mb-3" style="padding: 5% 0%">
                     <label for="SeleccionePoliclinica" class="form-label">Seleccione una Policlínica</label>
-                    <select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required>
-
-              <?php
-
-
-
-              $policlinicas = PoliclinicaModel::listarPoliclinicas();
-
-              foreach ($policlinicas as $policlinica) {
-
-                echo '<option value="'.$policlinica.'">';
-              }
-
-              ?>
-
-</select>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <!--<select id="SeleccionePoliclinica" class="form-select">
-                        <option>Disabled select</option>
-                    </select>
-                </div>
+                    <!--<select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required></select>-->
+                    <select id="SeleccionePoliclinica" class="form-select" name="SeleccionePoliclinica" required>  
+                        <option value="">Disabled select</option>               
+                        
+              </select>
+              </div>                 
                 <div class="mb-3" style="padding: 5% 0%">
                     <label for="SeleccioneEspecialidad" class="form-label">Seleccione una Especialidad</label>
                     <select id="SeleccioneEspecialidad" class="form-select">
                         <option>Disabled select</option>
+                        
                     </select>
                 </div>
                 <div class="mb-3" style="padding: 5% 0%">
@@ -76,7 +58,7 @@ html, body {
                     <select id="SeleccioneMedico" class="form-select">
                         <option>Disabled select</option>
                     </select>
-                </div>-->
+                </div>
                 
                 <button type="submit" class="btn btn-primary">Submit</button>
             
@@ -85,13 +67,12 @@ html, body {
             </main>
         </div>
     </div>
-    
+    <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FPanama&showTz=0&showPrint=0&showTitle=0&src=ZXMucGEjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%230B8043" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>    
 
 
 
 
 <!--codigo de opciones.php '''''NO VA AQUÍ''''''''-->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
