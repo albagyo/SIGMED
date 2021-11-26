@@ -24,7 +24,7 @@ html, body {
 <body>
 
     
-<!--codigo de opciones.php '''''NO VA AQUÍ''''''''-->
+
     
     <div class="row align-items-start" style=" height:100%">
        
@@ -64,15 +64,13 @@ html, body {
             
             </main>
         </div>
-        <div class="col-md-9 ml-sm-12 col-lg-9 col-xl-10" style=" height:100%">
-            <iframe class="w-100" src="calendario.html" style="background: yellow; height:100%;"></iframe>
-            
+        <div class="col-md-9 ml-sm-12 col-lg-9 col-xl-10" style=" height:10%">
+        <?php require_once('calendario.html'); ?>
         </div>
     </div>
     
 
 
-<!--codigo de opciones.php '''''NO VA AQUÍ''''''''-->
 
 </body>
 </html>
