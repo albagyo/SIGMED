@@ -26,7 +26,7 @@ html, body {
     
 <!--codigo de opciones.php '''''NO VA AQUÍ''''''''-->
     
-    <div class="full-height" style="background: yellow; width:100%">
+    <div class="row align-items-start" style=" height:100%">
        
         <div class="col-md-3 ml-sm-12 col-lg-3 col-xl-2 " style="height:100%; background: #B9FFFF; ">
             <div style="display: table; width:100%; height:8%;" >
@@ -64,10 +64,12 @@ html, body {
             
             </main>
         </div>
+        <div class="col-md-9 ml-sm-12 col-lg-9 col-xl-10" style=" height:100%">
+            <iframe class="w-100" src="calendario.html" style="background: yellow; height:100%;"></iframe>
+            
+        </div>
     </div>
-    <div style="float:right">
-        <iframe src="calendario.html"></iframe>
-    </div>
+    
 
 
 <!--codigo de opciones.php '''''NO VA AQUÍ''''''''-->
