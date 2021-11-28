@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-  <title>RUBYMAGE Datepicker</title>
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- <link rel='stylesheet' type='text/css' href='http://fian.my.id/Waves/static/waves.min.css?v=0.7.4'> -->
@@ -12,14 +8,11 @@
 
 <body>
   <style>
-    .container { max-width: 100%; } 
+    .container { max-width: 70%; } 
     h1 { line-height: 15px; }
-    input { width: 100%; height: 20px; }
   </style>
 
   <div ng-app="myApp" ng-controller="MyCtrl" class="container">
-
-    <h1>Inline</h1>
     <div rm-datepicker ng-model="oDate1" rm-config="rmConfig1"></div>
     <br>
     <div>Selected date: {{oDate1 | date: 'yyyy-MM-dd'}}</div>
@@ -68,5 +61,3 @@
     // window.onload = Waves.init();
   </script>
 </body>
-
-</html>

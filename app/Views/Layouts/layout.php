@@ -25,11 +25,11 @@ html, body {
     <header>
 		<?php require_once('menu.php'); ?>
 	</header>
-    <?php require_once('Models/PoliclinicaModel.php'); ?>
+  
     
 <!--codigo de opciones.php '''''NO VA AQUÍ''''''''-->
     
-    <div class="full-height">
+<div class="row align-items-start" style=" height:100%">
         <div class="col-md-3 ml-sm-12 col-lg-3 col-xl-2 " style="height:100%; background: #B9FFFF; ">
             <div style="display: table; width:100%; height:8%;" >
                 <div  style="display: table-cell; background: #033FAC; width:100%; height:100%; color: #ffffff; text-align:center; vertical-align:middle">
@@ -61,11 +61,11 @@ html, body {
                 </div>
                 
                 <button type="submit" class="btn btn-primary">Submit</button>
-            
             </form>
-            
             </main>
-            
+        </div>
+        <div class="col-md-3 ml-sm-12 col-lg-3 col-xl-2 ">
+          <?php require_once('C:\xampp\htdocs\SIGMED\app\Views\Paciente\calendario\index.html'); ?>
         </div>
     </div>
 
