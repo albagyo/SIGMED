@@ -8,13 +8,11 @@ class Connection
     }
 }
 
+$db = Connection::conectar();
 
-/*if ($connection) {
-    echo "Conexión a la Base de Datos exitosa";
-    }
-    else {
-    die ("Conexion a la Base de Datos ha fallado");
-    }*/
-
-
-  
+if($db === false){
+    die("ERROR: Could not connect. " . $db->connect_error);
+}
+else{
+    echo "Conexión a la base de datos exitosa.";
+}
