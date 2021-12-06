@@ -32,21 +32,21 @@ html, body {
 <form action=" " method="POST">
   <section id="C" style="width: 60%; height: 50%; float: right; text-overflow: inherit;  margin-top: 0%;">
     <div style="padding: 0% 15% 10% 15%;">
-      <div class="cedUsuario" style=" height:8%;" >
+      <div class="cedula" style=" height:8%;" >
         <label for="IDdeUsuario" class="form-label">No° de Cédula/Pasaporte</label>
-        <input type="cedula" class="form-control" id="IDdeUsuario" name="cedUsuario">  
+        <input type="cedula" class="form-control" id="IDdeUsuario" name="cedula">  
       </div>
-      <div class="nombrePaciente" style=" height:8%;" >
+      <div class="nombre" style=" height:8%;" >
         <label for="Nom" class="form-label">Nombre</label>
-        <input type="nombre" class="form-control" id="Nom" name="nombrePaciente">  
+        <input type="nombre" class="form-control" id="Nom" name="nombre">  
       </div>
-      <div class="apellidoPaciente" style=" height:8%;" >
+      <div class="apellido" style=" height:8%;" >
         <label for="Apel" class="form-label">Apellido</label>
-        <input type="apell" class="form-control" id="Apel" name="apellidoPaciente">  
+        <input type="apell" class="form-control" id="Apel" name="apellido">  
       </div>
-      <div class="emailUser" style=" height:8%;" >
+      <div class="email" style=" height:8%;" >
         <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" name="emailUser">  
+        <input type="email" class="form-control" id="exampleInputEmail1" name="email">  
       </div>
       <div class="passwd" style=" height:8%;" >
         <label for="exampleInputPassword1" class="form-label">Contraseña</label>
@@ -58,11 +58,13 @@ html, body {
   </section>
 </form>
 
+
+<form action=" " method="POST">
 <section id="D">
     <h7> ¿Ya tiene cuenta? Inicie sesión</h7>
     <style> h7 {  text-decoration-line: underline; }    </style>
 </section>
-
+</form>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

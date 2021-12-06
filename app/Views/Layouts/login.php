@@ -25,19 +25,14 @@ html, body {
   <p> La salud es la mayor posesión. La alegría es el mayor tesoro.</p>
   </section> 
 
-  <section id="B">
-  </p></p><h1> INICIO DE SESIÓN</h1></p></p></h1>
-  </section> 
-
-
 <form action="" method="POST">
   <section id="C" >
+       <h1> INICIO DE SESIÓN</h1>
         <div style="padding: 10% 20% 4% 20%;">
         </p></p>
           <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
           <input type="email"  class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp"> 
           <p></p>  <p></p>
-
 
           <label for="exampleInputPassword1" class="form-label">Contraseña</label>
           <input type="password" class="form-control" id="exampleInputPassword1">
@@ -48,13 +43,11 @@ html, body {
   <div style="padding: 0% 20% 10% 20%;">
   <div class="d-grid gap-2">
         <a class="btn btn-primary" href="http://localhost/SIGMED/app/Views/Paciente/calendario/agendar.php" role="button">Iniciar Sesión</a><p></p>
-        <h7> ¿Olvidó su contraseña?</h7> <p></p> <style> h7 {  text-decoration-line: underline; }    </style>
+        <h7> ¿Olvidó su contraseña?</h7>  <style> h7 {  text-decoration-line: underline; }    </style>
   </div>
   </div>
-</section>
-
-  
-    </form> 
+</section> 
+</form> 
 
 <section id="E">
 <div style="padding: 0% 20% 10% 20%;">
