@@ -17,20 +17,34 @@ html, body {
 
 </head>
 <body>
-<table class="table table-hover">
+<div style="display: table; width:100%;  height:15%;" >
+            <div  style="display: table-cell; background: #fff; width:100%; height:100%; color: #ffffff; text-align:center; vertical-align:middle">
+
+  <div class="row" style="color:#000000">
+    <div class="col">
+      <h1>Mis Citas</h1>
+    </div>
+    <div class="col">
+      <h1>xxxxxxxx</h1> 
+    </div>
+  </div>
+</div>
+</div>
+<div style="padding:2%">
+<table class="table table-hover" >
 <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Hora</th>
+      <th scope="col">Policlínica</th>
+      <th scope="col">Médico</th>
       <th scope="col"></th>
       <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
+      <th scope="row">xxx-xx-xx</th>
       <td>Mark</td>
       <td>Otto</td>
       <td>@mdo</td>
@@ -55,4 +69,6 @@ html, body {
     </tr>
   </tbody>
 </table>
+</div>
+
 </body>
