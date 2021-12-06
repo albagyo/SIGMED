@@ -20,47 +20,42 @@ html, body {
 </head>
 <body>
 
-
-<section id="A">
+<section id="A" style=" width: 40%; height: 100%; text-align: center; color: #f0f8ff; float: right; background-color: blue; margin-top: 0%;">
     <h1> Registro de Usuario </p></p></h1>
     <p> ALGO CREATIVO AQUI</p>
   </section> 
 
-<section id="B">
+<section id="B" style=" width: 60%; height: 15%; text-align: center; float: left; text-overflow: inherit; margin-top: 0%;">
     <h2> Ingrese los datos para registarse a SIGMED </h2></p></p></h1>
   </section> 
 
-<section id="C">
-  <form>
-          <div class="cedula">
+<form action=" " method="POST">
+<section id="C" style="width: 60%; height: 50%; float: right; text-overflow: inherit;  margin-top: 0%;">
+          <div class="cedUsuario" style="display: table; width:70%;  height:8%;" >
             <label for="IDdeUsuario" class="form-label">No° de Cédula/Pasaporte</label>
-            <input type="cedula" class="form-control" id="IDdeUsuario" aria-describedby="idUsuario">  
+            <input type="cedula" class="form-control" id="IDdeUsuario" name="cedUsuario">  
           </div>
-          <div class="nombre">
+          <div class="nombrePaciente" style="display: table; width:70%;  height:8%;" >
             <label for="Nom" class="form-label">Nombre</label>
-            <input type="nombre" class="form-control" id="Nom" aria-describedby="nomUsuario">  
+            <input type="nombre" class="form-control" id="Nom" name="nombrePaciente">  
           </div>
-          <div class="apellido">
+          <div class="apellidoPaciente" style="display: table; width:70%;  height:8%;" >
             <label for="Apel" class="form-label">Apellido</label>
-            <input type="apell" class="form-control" id="Apel" aria-describedby="apellUsuario">  
+            <input type="apell" class="form-control" id="Apel" name="apellidoPaciente">  
           </div>
-          <div class="telefono">
-            <label for="Tel" class="form-label">Telefono</label>
-            <input type="telf" class="form-control" id="Tel" aria-describedby="telUsuario">  
-          </div>
-          <div class="corre">
+          <div class="emailUser" style="display: table; width:70%;  height:8%;" >
             <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+            <input type="email" class="form-control" id="exampleInputEmail1" name="emailUser">  
           </div>
-          <div class="contra">
+          <div class="passwd" style="display: table; width:70%;  height:8%;" >
             <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <input type="password" class="form-control" id="exampleInputPassword1" name="passwd">
           </div><p></p>
-    </form>
+          <a class="btn btn-primary" href="http://localhost/SIGMED/app/Views/Paciente/calendario/agendar.php" role="button">Registarse</a><p></p>
 </section>
+</form>
 
 <section id="D">
-    <button type="submit" class="btn btn-primary">Registrarse</button><p></p>
     <h7> ¿Ya tiene cuenta? Inicie sesión</h7>
     <style> h7 {  text-decoration-line: underline; }    </style>
 </section>
