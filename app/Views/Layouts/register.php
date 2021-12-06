@@ -34,19 +34,15 @@ html, body {
   <form>
           <div class="cedula">
             <label for="IDdeUsuario" class="form-label">No° de Cédula/Pasaporte</label>
-            <input type="cedula" class="form-control" id="IDdeUsuario" aria-describedby="idUsuario">  
+            <input type="cedula" class="form-control" id="IDdeUsuario" name="cedPaciente" aria-describedby="idUsuario">  
           </div>
           <div class="nombre">
             <label for="Nom" class="form-label">Nombre</label>
-            <input type="nombre" class="form-control" id="Nom" aria-describedby="nomUsuario">  
+            <input type="nombre" class="form-control" id="Nom" name="nombrePaciente" aria-describedby="nomUsuario">  
           </div>
           <div class="apellido">
             <label for="Apel" class="form-label">Apellido</label>
-            <input type="apell" class="form-control" id="Apel" aria-describedby="apellUsuario">  
-          </div>
-          <div class="telefono">
-            <label for="Tel" class="form-label">Telefono</label>
-            <input type="telf" class="form-control" id="Tel" aria-describedby="telUsuario">  
+            <input type="apell" class="form-control" id="Apel" name="apellidoPaciente" aria-describedby="apellUsuario">  
           </div>
           <div class="corre">
             <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
