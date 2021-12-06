@@ -20,12 +20,7 @@ body{
     width: 60%; height: 50%; float: right; text-overflow: inherit; margin-top: 0%;
 }
 #D{
-    width: 60%;
-    height: 30%;
-    text-align: center;
-    text-decoration-line: underline;
-    float: right;
-    margin-top: 10%;
+    width: 60%; height: 30%; text-align: center; text-decoration-line: underline; float: right; margin-top: 10%;
 }
 
 
