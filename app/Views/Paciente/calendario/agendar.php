@@ -1,8 +1,4 @@
-<?php 
-    $db = Connection::conectar();
-    $sql = "SELECT * from policlinica;";
-    $consulta = $this->db->query($sql);
-?>
+
 
 <!DOCTYPE html>
 <html>
@@ -31,74 +27,36 @@ html, body {
             <div  style="display: table-cell; background: #033FAC; width:100%; height:100%; color: #ffffff; text-align:center; vertical-align:middle">
                 <h2 >Agendar Cita</h2>
             </div>
-<<<<<<< HEAD
-            <main role="main" class="col-md-11 ml-sm-11 col-lg-11 px-1">
-            <form>
-                <div class="mb-3" style="padding: 5% 0%">
-                    <label for="SeleccionePoliclinica" class="form-label">Seleccione una Policlínica</label>
-                    <!--<select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required></select>-->
-                    <select id="SeleccionePoliclinica" class="form-select" name="nombrePoliclinica" required>  
-                       <?php while ($row = mysqli_fetch_array($consulta)):; ?>
-                        <option value=""><?php echo $row[1]; ?></option>   
-                        <?php endwhile;?>            
-                        
-              </select>
-              </div>                 
-                <div class="mb-3" style="padding: 5% 0%">
-                    <label for="SeleccioneEspecialidad" class="form-label">Seleccione una Especialidad</label>
-                    <select id="SeleccioneEspecialidad" class="form-select" name="nombreEspecialidad" required>
-                        <option>Disabled select</option>
-                        
-                    </select>
-                </div>
-                <div class="mb-3" style="padding: 5% 0%">
-                    <label for="SeleccioneMedico" class="form-label">Seleccione un Médico</label>
-                    <select id="SeleccioneMedico" class="form-select" name="nombreMedico" required>
-                        <option>Disabled select</option>
-                    </select>
-                </div>
-                
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-            </main>
         </div>
-        <div class="col-md-9 ml-sm-12 col-lg-9 col-xl-10 ">
-          <?php require_once('index.html'); ?>
-=======
->>>>>>> e3078e677a7dd4678f42738a7b14ae2095775cc4
-        </div>
-        <main role="main" class="col-md-12 ml-sm-12 col-lg-12 px-1">
+        <main role="main" class="col-md-12 ml-sm-12 col-lg-12 px-3">
         <form action="" method="post">
             <div class="mb-3" style="padding: 5% 0%">
                 <label for="SeleccionePoliclinica" class="form-label">Seleccione una Policlínica</label>
                 <!--<select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required></select>-->
-                <select id="SeleccionePoliclinica" class="form-select" name="SeleccionePoliclinica" required>  
-                    <option value="">Disabled select</option>               
-                    
+                <select id="SeleccionePoliclinica" class="form-select" name="nombrePoliclinica" required>  
+                <?php 
+                    require_once "BasedeDatos.php";
+                    $sql = "SELECT * FROM policlinica";
+                    $policlinicas = $db->query($sql);
+                    while ($filas = $policlinicas->fetch_assooloc()):;
+                ?>
+                <option value=""><?php echo $filas;?></option>               
+                <?php endwhile;?> 
                 </select>
             </div>                 
             <div class="mb-3" style="padding: 5% 0%">
                 <label for="SeleccioneEspecialidad" class="form-label">Seleccione una Especialidad</label>
-                <select id="SeleccioneEspecialidad" class="form-select" name="SeleccioneEspecialidad" required>
+                <select id="SeleccioneEspecialidad" class="form-select" name="nombreEspecialidad" required>
                     <option>Disabled select</option>
                     
                 </select>
             </div>
             <div class="mb-3" style="padding: 5% 0%">
                 <label for="SeleccioneMedico" class="form-label">Seleccione un Médico</label>
-                <select id="SeleccioneMedico" class="form-select" name="SeleccioneMedico" require>
+                <select id="SeleccioneMedico" class="form-select" name="nombreMedico" require>
                     <option>Disabled select</option>
                 </select>
             </div>
             
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-        </main>
-    </div>
-    <div class="col-md-9 ml-sm-12 col-lg-9 col-xl-10 px-0">
-        <?php require_once('index.html'); ?>
-    </div>
-</div>
-
-</body>
-</html>
