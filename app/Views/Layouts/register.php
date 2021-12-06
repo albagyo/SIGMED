@@ -53,18 +53,13 @@ html, body {
         <input type="password" class="form-control" id="exampleInputPassword1" name="passwd">
       </div><p></p>
       <div class="d-grid gap-2">
-        <a class="btn btn-primary" href="http://localhost/SIGMED/app/Views/Paciente/calendario/agendar.php" role="button">Iniciar Sesión</a><p></p>
+        <input type="submit" class="btn btn-primary" value="Registrarse">
  </div>
   </section>
+  <p><a href="login.php">¿Ya tiene cuenta? Inicie sesión </a></p>
+  <style>  {  text-align: center; text-decoration-line: underline; float: right;}    </style>
 </form>
 
-
-<form action=" " method="POST">
-<section id="D">
-    <h7> ¿Ya tiene cuenta? Inicie sesión</h7>
-    <style> h7 {  text-decoration-line: underline; }    </style>
-</section>
-</form>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
