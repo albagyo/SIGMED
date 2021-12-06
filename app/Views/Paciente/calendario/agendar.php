@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,33 +33,30 @@ html, body {
             <div class="mb-3" style="padding: 5% 0%">
                 <label for="SeleccionePoliclinica" class="form-label">Seleccione una Policlínica</label>
                 <!--<select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required></select>-->
-                <select id="SeleccionePoliclinica" class="form-select" name="SeleccionePoliclinica" required>  
-                    <option value="">Disabled select</option>               
-                    
+                <select id="SeleccionePoliclinica" class="form-select" name="nombrePoliclinica" required>  
+                <?php 
+                    require_once "BasedeDatos.php";
+                    $sql = "SELECT * FROM policlinica";
+                    $policlinicas = $db->query($sql);
+                    while ($filas = $policlinicas->fetch_assooloc()):;
+                ?>
+                <option value=""><?php echo $filas;?></option>               
+                <?php endwhile;?> 
                 </select>
             </div>                 
             <div class="mb-3" style="padding: 5% 0%">
                 <label for="SeleccioneEspecialidad" class="form-label">Seleccione una Especialidad</label>
-                <select id="SeleccioneEspecialidad" class="form-select" name="SeleccioneEspecialidad" required>
+                <select id="SeleccioneEspecialidad" class="form-select" name="nombreEspecialidad" required>
                     <option>Disabled select</option>
                     
                 </select>
             </div>
             <div class="mb-3" style="padding: 5% 0%">
                 <label for="SeleccioneMedico" class="form-label">Seleccione un Médico</label>
-                <select id="SeleccioneMedico" class="form-select" name="SeleccioneMedico" require>
+                <select id="SeleccioneMedico" class="form-select" name="nombreMedico" require>
                     <option>Disabled select</option>
                 </select>
             </div>
             
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-        </main>
-    </div>
-    <div class="col-md-9 ml-sm-12 col-lg-9 col-xl-10 px-0">
-        <?php require_once('index.html'); ?>
-    </div>
-</div>
-
-</body>
-</html>
