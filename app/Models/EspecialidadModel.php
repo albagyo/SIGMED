@@ -1,20 +1,19 @@
 <?php 
+require_once "BasedeDatos.php";
 
 class EspecialidadModel
 {
-    private $db;
     private $especialidades;
 
     public function __construct()
     {
-        $this->db = Connection::conectar();
         $this->especialidades = array();
     }
 
     public function listarEspecialidades()
     {
         $sql = "SELECT nombreEspecialidad FROM especialidad;";
-        $consulta = $this->db->query($sql);
+        $consulta = $db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
             $especialidades[] = $filas;
         }
@@ -28,7 +27,7 @@ class EspecialidadModel
                 on m.codEspecialidad=e.codEspecialidad JOIN policlinica as p
                 on p.codPoliclinica=m.codPoliclinica
                 WHERE m.codPoliclinica=".$cod_policlinica.";";
-        $consulta = $this->db->query($sql);
+        $consulta = $db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
             $especialidades[] = $filas;
         }

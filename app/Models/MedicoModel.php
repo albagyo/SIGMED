@@ -1,13 +1,12 @@
 <?php
+require_once "BasedeDatos.php";
 
 class MedicoModel
 {
-    private $db;
     private $medicos;
 
     public function __construct()
     {
-        $this->db = Connection::conectar();
         $this->medicos = array();
     }
 
@@ -15,7 +14,7 @@ class MedicoModel
     public function listarMedicos()
     {
         $sql = "SELECT nombreMedico+apellidoMedico as medico FROM medico;";
-        $consulta = $this->db->query($sql);
+        $consulta = $db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
             $medicos[] = $filas;
         }
@@ -25,7 +24,7 @@ class MedicoModel
     public function obtenerMedicos()
     {
         $sql = "SELECT * FROM medico;";
-        $consulta = $this->db->query($sql);
+        $consulta = $db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
             $medicos[] = $filas;
         }
@@ -35,7 +34,7 @@ class MedicoModel
     public function filtrarMedico($cod_especialidad)
     {
         $sql = "SELECT nombreMedico+apellidoMedico FROM medico WHERE codEspecialidad=".$cod_especialidad.";";
-        $consulta = $this->db->query($sql);
+        $consulta = $db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
             $medicos[] = $filas;
         }

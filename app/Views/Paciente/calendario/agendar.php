@@ -1,3 +1,9 @@
+<?php 
+    $db = Connection::conectar();
+    $sql = "SELECT * from policlinica;";
+    $consulta = $this->db->query($sql);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,21 +44,23 @@ html, body {
                 <div class="mb-3" style="padding: 5% 0%">
                     <label for="SeleccionePoliclinica" class="form-label">Seleccione una Policlínica</label>
                     <!--<select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required></select>-->
-                    <select id="SeleccionePoliclinica" class="form-select" name="SeleccionePoliclinica" required>  
-                        <option value="">Disabled select</option>               
+                    <select id="SeleccionePoliclinica" class="form-select" name="nombrePoliclinica" required>  
+                       <?php while ($row = mysqli_fetch_array($consulta)):; ?>
+                        <option value=""><?php echo $row[1]; ?></option>   
+                        <?php endwhile;?>            
                         
               </select>
               </div>                 
                 <div class="mb-3" style="padding: 5% 0%">
                     <label for="SeleccioneEspecialidad" class="form-label">Seleccione una Especialidad</label>
-                    <select id="SeleccioneEspecialidad" class="form-select">
+                    <select id="SeleccioneEspecialidad" class="form-select" name="nombreEspecialidad" required>
                         <option>Disabled select</option>
                         
                     </select>
                 </div>
                 <div class="mb-3" style="padding: 5% 0%">
                     <label for="SeleccioneMedico" class="form-label">Seleccione un Médico</label>
-                    <select id="SeleccioneMedico" class="form-select">
+                    <select id="SeleccioneMedico" class="form-select" name="nombreMedico" required>
                         <option>Disabled select</option>
                     </select>
                 </div>

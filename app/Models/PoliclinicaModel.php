@@ -25,7 +25,7 @@ class PoliclinicaModel
     public function listarPoliclinicas()
     {
         $sql = "SELECT nombrePoliclinica FROM policlinica;";
-        $consulta = $this->db->query($sql);
+        $consulta = $db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
             $policlinicas[] = $filas;
         }
