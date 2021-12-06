@@ -4,23 +4,29 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- <link rel='stylesheet' type='text/css' href='http://fian.my.id/Waves/static/waves.min.css?v=0.7.4'> -->
   <link rel='stylesheet' type='text/css' href='rm-datepicker.css'>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src="rm-datepicker.js"></script>
+  
 </head>
 
 <body>
+
   <style>
-    .container { max-width: 70%; } 
+    .container { max-width: 100%; } 
     h1 { line-height: 15px; }
   </style>
-
-  <div ng-app="myApp" ng-controller="MyCtrl" class="container">
+<form method="post">
+  <div ng-app="myApp" ng-controller="MyCtrl" class="container" style="padding: 0px; margin: 0px;">
     <div rm-datepicker ng-model="oDate1" rm-config="rmConfig1"></div>
     <br>
-    <div>Selected date: {{oDate1 | date: 'yyyy-MM-dd'}}</div>
+    <div>Selected date: {{oDate1}}</div>
+    <select id="SeleccionePoliclinica" class="form-select" name="fecha" required style="display: none;">  
+      <option value="{{oDate1}}">{{oDate1 | date: 'yyyy-MM-dd'}}</option>
+      <input type="submit" value="Continuar">
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-  <!-- <script src="http://fian.my.id/Waves/static/waves.min.js?v=0.7.4"></script> -->
-  <script src="rm-datepicker.js"></script>
+</form>
   <script>
     var app = angular.module("myApp", ["rmDatepicker"]);
 
