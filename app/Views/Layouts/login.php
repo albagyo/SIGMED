@@ -37,16 +37,8 @@ html, body {
           <label for="exampleInputPassword1" class="form-label">Contraseña</label>
           <input type="password" class="form-control" id="exampleInputPassword1">
         </div>
+        <input type="submit" class="btn btn-primary" value="Iniciar Sesión">
     </section>
-
-  <section id="D">
-  <div style="padding: 0% 20% 10% 20%;">
-  <div class="d-grid gap-2">
-        <a class="btn btn-primary" href="http://localhost/SIGMED/app/Views/Paciente/calendario/agendar.php" role="button">Iniciar Sesión</a><p></p>
-        <h7> ¿Olvidó su contraseña?</h7>  <style> h7 {  text-decoration-line: underline; }    </style>
-  </div>
-  </div>
-</section> 
 </form> 
 
 <section id="E">
