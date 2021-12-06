@@ -13,20 +13,11 @@ body{
 }
 
 #B{
-    width: 60%;
-    height: 15%;
-    text-align: center;
-    float: left;
-    text-overflow: inherit;
-    margin-top: 0%;
+    width: 60%; height: 15%; text-align: center; float: left; text-overflow: inherit; margin-top: 0%;
 }
 
 #C{
-    width: 60%;
-    height: 50%;
-    float: right;
-    text-overflow: inherit;
-    margin-top: 0%;
+    width: 60%; height: 50%; float: right; text-overflow: inherit; margin-top: 0%;
 }
 #D{
     width: 60%;

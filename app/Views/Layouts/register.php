@@ -20,47 +20,51 @@ html, body {
 </head>
 <body>
 
-
-<section id="A">
+<section id="A" style="border-radius: 35px 0px 0px 35px; width: 40%; height: 100%; text-align: center; color: #f0f8ff; float: right; background-color: blue; margin-top: 0%;">
     <h1> Registro de Usuario </p></p></h1>
     <p> ALGO CREATIVO AQUI</p>
   </section> 
 
-<section id="B">
+<section id="B" style=" width: 60%; height: 15%; text-align: center; float: left; text-overflow: inherit; margin-top: 0%;">
     <h2> Ingrese los datos para registarse a SIGMED </h2></p></p></h1>
   </section> 
 
-<section id="C">
-  <form>
-          <div class="cedula">
-            <label for="IDdeUsuario" class="form-label">No° de Cédula/Pasaporte</label>
-            <input type="cedula" class="form-control" id="IDdeUsuario" name="cedPaciente" aria-describedby="idUsuario">  
-          </div>
-          <div class="nombre">
-            <label for="Nom" class="form-label">Nombre</label>
-            <input type="nombre" class="form-control" id="Nom" name="nombrePaciente" aria-describedby="nomUsuario">  
-          </div>
-          <div class="apellido">
-            <label for="Apel" class="form-label">Apellido</label>
-            <input type="apell" class="form-control" id="Apel" name="apellidoPaciente" aria-describedby="apellUsuario">  
-          </div>
-          <div class="corre">
-            <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
-          </div>
-          <div class="contra">
-            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          </div><p></p>
-    </form>
-</section>
+<form action=" " method="POST">
+  <section id="C" style="width: 60%; height: 50%; float: right; text-overflow: inherit;  margin-top: 0%;">
+    <div style="padding: 0% 15% 10% 15%;">
+      <div class="cedula" style=" height:8%;" >
+        <label for="IDdeUsuario" class="form-label">No° de Cédula/Pasaporte</label>
+        <input type="cedula" class="form-control" id="IDdeUsuario" name="cedula">  
+      </div>
+      <div class="nombre" style=" height:8%;" >
+        <label for="Nom" class="form-label">Nombre</label>
+        <input type="nombre" class="form-control" id="Nom" name="nombre">  
+      </div>
+      <div class="apellido" style=" height:8%;" >
+        <label for="Apel" class="form-label">Apellido</label>
+        <input type="apell" class="form-control" id="Apel" name="apellido">  
+      </div>
+      <div class="email" style=" height:8%;" >
+        <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" name="email">  
+      </div>
+      <div class="passwd" style=" height:8%;" >
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" name="passwd">
+      </div><p></p>
+      <div class="d-grid gap-2">
+        <a class="btn btn-primary" href="http://localhost/SIGMED/app/Views/Paciente/calendario/agendar.php" role="button">Iniciar Sesión</a><p></p>
+ </div>
+  </section>
+</form>
 
+
+<form action=" " method="POST">
 <section id="D">
-    <button type="submit" class="btn btn-primary">Registrarse</button><p></p>
     <h7> ¿Ya tiene cuenta? Inicie sesión</h7>
     <style> h7 {  text-decoration-line: underline; }    </style>
 </section>
-
+</form>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

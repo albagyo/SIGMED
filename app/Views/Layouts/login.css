@@ -13,7 +13,7 @@ body{
 
 #B{
     width: 60%;
-    height: 10%;
+    height: 100%;
     text-align: center;
     float: right;
     text-overflow: inherit;
@@ -26,6 +26,7 @@ body{
     text-align: left;
     float: right;
     text-overflow: inherit;
+    
 }
 
 
