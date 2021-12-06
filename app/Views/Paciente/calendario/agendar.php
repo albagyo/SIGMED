@@ -60,3 +60,12 @@ html, body {
             
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        </main>
+    </div>
+    <div class="col-md-9 ml-sm-12 col-lg-9 col-xl-10 px-0">
+        <?php require_once('index.html'); ?>
+    </div>
+</div>
+
+</body>
+</html>
