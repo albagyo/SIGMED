@@ -160,7 +160,7 @@ input[rm-datepicker] + .rm-datepicker {
  Nav
  **********************************/
 .rm-datepicker .nav {
-  background-color: #00bfa5;
+  background-color: #033FAC;
   width: 100%;
   position: relative;
 }
@@ -301,7 +301,7 @@ input[rm-datepicker] + .rm-datepicker {
 
 /* active date */
 .rm-datepicker .date .j a {
-  background-color: rgba(0, 191, 165, 0.5);
+  background-color: #033FAC;
 }
 
 .rm-datepicker .date .out a {
@@ -358,7 +358,7 @@ input[rm-datepicker] + .rm-datepicker {
 .rm-datepicker .sunSat + * > *:nth-child(7n) a,
 .rm-datepicker.mondayStart .sunSat + * > *:nth-child(6),
 .rm-datepicker.mondayStart .sunSat + * > *:nth-child(7n+6) a {
-  color: #039BE5 !important;
+  color: #f44336 !important;
 }
 
 /* sunday */

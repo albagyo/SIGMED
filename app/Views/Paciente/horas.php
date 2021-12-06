@@ -54,8 +54,19 @@ html, body {
         </form>
         </main>
     </div>
-    <div class="col-md-9 ml-sm-12 col-lg-9 col-xl-10 px-0">
-        <?php require_once('index.html'); ?>
+    <div class="col-md-9 ml-sm-12 col-lg-9 col-xl-10 px-3">
+        <div  style="width:100%; height:100%; text-align:center; vertical-align:middle; padding:2%">
+            <br>    
+            <h1>Seleccione una Hora</h1>
+            <br>
+            <h3 style="text-align:left">Horas Disponibles</h3>
+            <select class="form-select" size="8" aria-label="multiple select example" name="hora">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
     </div>
 </div>
 
