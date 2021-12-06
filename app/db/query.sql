@@ -125,3 +125,5 @@ ADD CONSTRAINT `Cita_codHora_FK`
       REFERENCES `sigmed`.`horario` (`codHora`)
       ON DELETE CASCADE
       ON UPDATE CASCADE;
+
+/////

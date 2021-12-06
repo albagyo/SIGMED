@@ -344,7 +344,7 @@
                 '<a class="back waves-effect" ng-click="toggleState(-1)" rm-include="activeDateTpl[state]"></a>' +
                 '<a class="adjacent waves-effect" ng-click="prev()"><i class="mi_keyboard_arrow_up"></i></a>' +
                 '<a class="adjacent waves-effect" ng-click="next()"><i class="mi_keyboard_arrow_down"></i></a>' +
-                '<a class="today waves-effect" ng-click="now()">Today</a>' +
+                '<a class="today waves-effect" ng-click="now()">Hoy</a>' +
             '</div>' +
             '<div class="body" ng-include="\'rm-\' + state + \'.html\'"></div>' +
         '</div>' +
