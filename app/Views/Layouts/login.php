@@ -28,7 +28,7 @@ html, body {
   </p></p><h1> INICIO DE SESIÓN</h1></h1>
   </section> 
 
-<form action="http://localhost/SIGMED/app/Views/Paciente/calendario/agendar.php" method="POST">
+<form action="http://localhost/SIGMED/app/Views/Paciente/opciones.php" method="POST">
   <section id="C" style=" width: 60%; height: 45%; text-align: left; float: right; text-overflow: inherit; ">
         <div style="padding: 10% 20% 4% 20%;">
           <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
