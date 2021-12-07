@@ -21,6 +21,7 @@ html, body {
 
 <section id="A" style="border-radius: 0px 35px 35px 0px; width: 40%;  height: 100%; text-align: center; color: #f0f8ff ; float: left; background-color: blue; margin-top: 0%;">
   </p></p><h1> Bienvenido a SIGMED </p></p></h1>
+  <img src="doctor.png" alt="sigmed" width="500" height="450"></p></p>
   <p> La salud es la mayor posesión. La alegría es el mayor tesoro.</p>
   </section> 
 
@@ -62,3 +63,4 @@ html, body {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
+
