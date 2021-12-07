@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,19 +27,12 @@ html, body {
             </div>
         </div>
         <main role="main" class="col-md-12 ml-sm-12 col-lg-12 px-3">
-        <form action="" method="post">
+        <form action="http://localhost/SIGMED/app/Views/Paciente/calendario/fecha.php" method="post">
             <div class="mb-3" style="padding: 5% 0%">
                 <label for="SeleccionePoliclinica" class="form-label">Seleccione una Policlínica</label>
                 <!--<select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required></select>-->
                 <select id="SeleccionePoliclinica" class="form-select" name="nombrePoliclinica" required>  
-                <?php 
-                    require_once "BasedeDatos.php";
-                    $sql = "SELECT * FROM policlinica";
-                    $policlinicas = $db->query($sql);
-                    while ($filas = $policlinicas->fetch_assooloc()):;
-                ?>
-                <option value=""><?php echo $filas;?></option>               
-                <?php endwhile;?> 
+                <option>Disabled select</option>
                 </select>
             </div>                 
             <div class="mb-3" style="padding: 5% 0%">
@@ -63,7 +54,7 @@ html, body {
         </main>
     </div>
     <div class="col-md-9 ml-sm-12 col-lg-9 col-xl-10 px-0">
-        <?php require_once('index.html'); ?>
+        <?php require_once('calendario/index.html'); ?>
     </div>
 </div>
 
