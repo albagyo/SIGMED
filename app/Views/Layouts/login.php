@@ -29,7 +29,7 @@ html, body {
   </section> 
 
 <form action="http://localhost/SIGMED/app/Views/Paciente/calendario/agendar.php" method="POST">
-  <section id="C" style=" width: 60%; height: 100%; text-align: left; float: right; text-overflow: inherit; ">
+  <section id="C" style=" width: 60%; height: 45%; text-align: left; float: right; text-overflow: inherit; ">
         <div style="padding: 10% 20% 4% 20%;">
           <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
           <input type="email"  class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp"> 
@@ -50,7 +50,7 @@ html, body {
   </section> 
 
 <section id="E" style="width: 60%; height: 35%; text-align: center; float: right;">
-<div style="padding: 0% 20% 10% 20%;">
+<div style="padding: 0% 20% 0% 20%;">
       <div class="d-grid gap-2">
       <h7> Cree una cuenta nueva</h7>
           <a class="btn btn-success" href="http://localhost/SIGMED/app/Views/Layouts/register.php" role="button">Registrarse</a><p></p> 
