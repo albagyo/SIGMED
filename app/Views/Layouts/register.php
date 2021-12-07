@@ -21,7 +21,7 @@ html, body {
 
 <section id="A" style="border-radius: 35px 0px 0px 35px; width: 40%; height: 100%; text-align: center; color: #f0f8ff; float: right; background-color: blue; margin-top: 0%;">
     </p></p><h1> Registro de Usuario </p></p></h1>
-    <img src="paciente.png" alt="sigmed" width="500" height="500"></p></p>
+    <img src="usuario.png" alt="sigmed" width="450" height="450"></p></p>
   </section> 
 
 <section id="B" style=" width: 60%; height: 10%; text-align: center; float: left; text-overflow: inherit; margin-top: 2%;">
@@ -57,7 +57,7 @@ html, body {
   </section>
 </form>
 
-<section id="D" style="width: 60%; height: 10%; text-align: center; float: right; text-overflow: inherit;">
+<section id="D" style="width: 60%; height: 10%; text-align: center; float: right; text-overflow: inherit; ">
   <a href="login.php">¿Ya tiene cuenta? Inicie sesión </a>
   <style>  {  text-align: center; text-decoration-line: underline; float: left; }    </style>
   </section> 
