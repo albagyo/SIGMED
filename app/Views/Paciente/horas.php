@@ -17,7 +17,6 @@ html, body {
 
 </head>
 <body>
-
     
 <div class="row" style=" height:100%">
     <div class="col-md-3 ml-sm-12 col-lg-3 col-xl-2 px-0" style="height:100%; background: #B9FFFF; ">
@@ -37,7 +36,7 @@ html, body {
             <h1>Seleccione una Hora</h1>
             <br>
             <h3 style="text-align:left">Horas Disponibles</h3>
-            <form action="MisCitas.php" method="POST">
+            <form action="" method="POST">
                 <select class="form-select" size="16" aria-label="multiple select example" name="hora" style="padding: 7px 10px; background: #B9FFFF">
                     <option >Open this select menu</option>
                     <option value="1">One</option>

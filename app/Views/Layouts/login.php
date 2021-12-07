@@ -49,7 +49,7 @@ html, body {
   <h1> ---------------------------------</h1> </h1></p></p>
   </section> 
 
-<section id="E" style="width: 60%; height: 35%; text-align: center; float: right;">
+<section id="E" style="width: 60%; height: 5%; text-align: center; float: right;">
 <div style="padding: 0% 20% 0% 20%;">
       <div class="d-grid gap-2">
       <h7> Cree una cuenta nueva</h7>

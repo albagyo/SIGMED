@@ -17,6 +17,10 @@ html, body {
 
 </head>
 <body>
+<header>
+		<?php require_once('C:\xampp\htdocs\SIGMED\app\Views\Layouts\menu.php'); ?>
+	</header>
+
 <div style="display: table; width:100%;  height:15%;" >
             <div  style="display: table-cell; background: #fff; width:100%; height:100%; color: #ffffff; text-align:center; vertical-align:middle">
 
@@ -31,44 +35,28 @@ html, body {
 </div>
 </div>
 <div style="padding:2%">
-<table class="table table-hover" >
-<thead>
-    <tr>
-      <th scope="col">Fecha</th>
-      <th scope="col">Hora</th>
-      <th scope="col">Policlínica</th>
-      <th scope="col">Médico</th>
-      <th scope="col"></th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">xxx-xx-xx</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td><button type="button" class="btn btn-primary">Reprogramar</button></td>
-      <td><button type="button" class="btn btn-danger">Eliminar</button></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td><button type="button" class="btn btn-primary">Reprogramar</button></td>
-      <td><button type="button" class="btn btn-danger">Eliminar</button></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry the Bird</td>
-      <td>@twitter</td>
-      <td>@twitter</td>
-      <td><button type="button" class="btn btn-primary">Reprogramar</button></td>
-      <td><button type="button" class="btn btn-danger">Eliminar</button></td>
-    </tr>
-  </tbody>
-</table>
+    <table class="table table-hover" >
+    <thead>
+        <tr>
+        <th >Fecha</th>
+        <th >Hora</th>
+        <th >Policlínica</th>
+        <th >Médico</th>
+        <th ></th>
+        <th ></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <th>xxx-xx-xx</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td><button type="button" class="btn btn-primary btn-sm">Reprogramar</button></td>
+        <td><button type="button" class="btn btn-danger btn-sm">Eliminar</button></td>
+        </tr>
+    </tbody>
+    </table>
 </div>
 
 </body>
