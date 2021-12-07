@@ -10,11 +10,11 @@ class PacienteModel
         $this->pacientes = array();
     }
 
-    //la variable $data es obtenida del formulario de registrar usuario
-    public function registrarPaciente($data)
+    //Registrar datos del paciente en la base de datos
+    public function registrarPaciente($cedula, $nombre, $apellido, $codUser)
     {
-        $sql = "INSERT INTO paciente (cedPaciente, nombrePaciente, apellidoPaciente, fechaNac)
-                VALUES('" . $data['cedPaciente'] . "','" . $data['nombrePaciente'] . "','" . $data['apellidoPaciente'] . "','" . $data['fechaNac'] . "');";
+        $sql = "INSERT INTO paciente (cedPaciente, nombrePaciente, apellidoPaciente, codUser)
+                VALUES('" . $cedula . "','" . $nombre . "','" . $apellido . "','" . $codUser . "');";
         $consulta = $db->query($sql);
         if ($consulta) {
             return true;

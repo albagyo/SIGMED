@@ -20,4 +20,36 @@ class UsuarioModel
             return false;
         }
     }
+
+    public function verificarUsuario($emailUser)
+    {
+        $sql = "SELECT count(*) as contador FROM usuario WHERE emailUser = '" . $emailUser . "';";
+        $consulta = $db->query($sql);
+        $cantidad_usuario = $consulta->fetch_assoc();
+        if ($cantidad_usuario['contador'] > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function obtenerUltimoCodUser(){
+        $sql = "SELECT max(codUser) FROM usuario;";
+        $consulta = $db->query($sql);
+        return $consulta;
+    }
+
+    public function obtenerHashedPassword($emailUser){
+        $sql = "SELECT passwordUser FROM usuario WHERE emailUser = '" . $emailUser . "';";
+        $consulta = $db->query($sql);
+        return $consulta;
+    }
+
+    public function obtenerCodUser($emailUser){
+        $sql = "SELECT codUser FROM usuario WHERE emailUser = '" . $emailUser . "';";
+        $consulta = $db->query($sql);
+        return $consulta;
+    }
+
+
 }

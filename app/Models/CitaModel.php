@@ -26,18 +26,28 @@ class CitaModel
     {
         $sql = "UPDATE cita SET fecha ='".$fecha."', codHora = '".$codHora."' where codCita = ".$cod_cita.";";
         $consulta = $db->query($sql);
+        if($consulta){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public function eliminarCita($cod_cita)
     {
         $sql = "delete from cita where codCita= '".$cod_cita."';";
         $consulta = $db->query($sql);
+        if($consulta){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     //obtener citas para la vista Mis Citas del paciente
-    public function obtenerCitasPaciente($cod_paciente)
+    public function obtenerCitasPaciente($ced_paciente)
     {
-        $sql = "select * from cita where codPaciente = ".$cod_paciente.";";
+        $sql = "select * from cita where codPaciente = ".$ced_paciente.";";
         $consulta = $db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
             $citas[] = $filas;
