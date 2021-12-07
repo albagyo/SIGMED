@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SIGMED</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="register.css" media="screen">
     <style>
 
 html, body {
@@ -21,17 +20,17 @@ html, body {
 <body>
 
 <section id="A" style="border-radius: 35px 0px 0px 35px; width: 40%; height: 100%; text-align: center; color: #f0f8ff; float: right; background-color: blue; margin-top: 0%;">
-    <h1> Registro de Usuario </p></p></h1>
+    </p></p><h1> Registro de Usuario </p></p></h1>
     <p> ALGO CREATIVO AQUI</p>
   </section> 
 
-<section id="B" style=" width: 60%; height: 15%; text-align: center; float: left; text-overflow: inherit; margin-top: 0%;">
+<section id="B" style=" width: 60%; height: 10%; text-align: center; float: left; text-overflow: inherit; margin-top: 2%;">
     <h2> Ingrese los datos para registarse a SIGMED </h2></p></p></h1>
   </section> 
 
 <form action="" method="POST">
-  <section id="C" style="width: 60%; height: 50%; float: right; text-overflow: inherit;  margin-top: 0%;">
-    <div style="padding: 0% 15% 10% 15%;">
+  <section id="C" style="width: 60%; height: 45%; float: right; text-overflow: inherit;  margin-top: 0%;">
+    <div style="padding: 0% 15% 10% 15%;"></p></p>
       <div class="cedula" style=" height:8%;" >
         <label for="IDdeUsuario" class="form-label">No° de Cédula/Pasaporte</label>
         <input type="cedula" class="form-control" id="IDdeUsuario" name="cedula">  
@@ -56,9 +55,12 @@ html, body {
         <input type="submit" class="btn btn-primary" value="Registrarse">
  </div>
   </section>
-  <p><a href="login.php">¿Ya tiene cuenta? Inicie sesión </a></p>
-  <style>  {  text-align: center; text-decoration-line: underline; float: right;}    </style>
 </form>
+
+<section id="D" style="width: 60%; height: 10%; text-align: center; float: right; text-overflow: inherit;">
+  <a href="login.php">¿Ya tiene cuenta? Inicie sesión </a>
+  <style>  {  text-align: center; text-decoration-line: underline; float: left; }    </style>
+  </section> 
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
