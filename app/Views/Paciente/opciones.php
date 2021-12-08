@@ -29,7 +29,8 @@ html, body {
             </div>
         </div>
         <main role="main" class="col px-3">
-        <form action="controller&action" method="post">
+
+        <form action="?controller=Cita&&action=guardarMedico" method="post">
             <div class="mb-3" style="padding: 5% 0%">
                 <label for="SeleccionePoliclinica" class="form-label">Seleccione una Policlínica</label>
                 <!--<select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required></select>-->

@@ -10,7 +10,7 @@ class CitaModel
         $this->citas = array();
     }
 
-    public function guardarCita($data)
+    public function guardar($data)
     {
         $sql = "INSERT INTO cita (fecha, codHora, codMedico, cedPaciente)
                 VALUES ('" .$data['fecha']. "','" .$data['codHora']. "'," .$data['codMedico']. ",'" .$data['cedPaciente']. "');";
@@ -21,8 +21,9 @@ class CitaModel
             return false;
         }
     }
+   
 
-    public function actualizarCita($cod_cita, $fecha, $codHora)
+    public function actualizar($cod_cita, $fecha, $codHora)
     {
         $sql = "UPDATE cita SET fecha ='".$fecha."', codHora = '".$codHora."' where codCita = ".$cod_cita.";";
         $consulta = $db->query($sql);
@@ -33,9 +34,9 @@ class CitaModel
         }
     }
 
-    public function eliminarCita($cod_cita)
+    public function eliminar($cod_cita)
     {
-        $sql = "delete from cita where codCita= '".$cod_cita."';";
+        $sql = "DELETE FROM cita where codCita= '".$cod_cita."';";
         $consulta = $db->query($sql);
         if($consulta){
             return true;
@@ -43,6 +44,15 @@ class CitaModel
             return false;
         }
     }
+
+    // Obtener datos de una cita para reprogramar
+    public function obtenerData($cod_cita)
+    {
+        $sql = "select * from cita where codCita = ".$cod_cita.";";
+        $consulta = $db->query($sql);
+        return $consulta;
+    }
+
 
     //obtener citas para la vista Mis Citas del paciente
     public function obtenerCitasPaciente($ced_paciente)

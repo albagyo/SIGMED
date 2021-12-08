@@ -1,6 +1,7 @@
 <?php 
 require_once('Models/CitaModel.php');
 require_once('Models/PacienteModel.php');
+require_once('Models/PoliclinicaModel.php');
 
 class CitaController
 {
@@ -10,58 +11,69 @@ class CitaController
 		
 	}
 
+    public function index()
+    {
+        $medico = new MedicoModel();
+        $medicos = $medico->listar();
+        require_once('Views/Paciente/agendar.php');
+    }
+
+
     //Agendar cita desde la vista del paciente
 	public function agendarCitaPaciente(){
-        //Obtener datos enviados a traves del formulario
-        $data['codMedico']=$_POST['nombreMedico'];
-		$data['fecha']=$_POST['fecha'];
-		$data['codHora']=$_POST['hora'];
+        // Verificar la existencia del parametro codCita 
+        if(isset($_POST["codCita"]) && !empty(trim($_POST["codCita"]))){
+            //Obtener datos enviados a traves del formulario
+            $data['codMedico']=$_POST['nombreMedico'];
+            $data['fecha']=$_POST['fecha'];
+            $data['codHora']=$_POST['hora'];
 
-        //obtener id de sesion
-        session_start();
-		$codUser = $_SESSION['id'];
-		
-		$paciente = new PacienteModel();
-        $data['cedPaciente'] = $paciente->obtenerCedPaciente($codUser);
+            //obtener id de sesion e email de usuario
+            session_start();
+            $codUser = $_SESSION['id'];
+            $emailUser= $_SESSION['emailUser'];
 
-        $cita = new CitaModel();
-        
-        if($cita->guardarCita($data))
-        {
-            $this->confirmarCitaAgendada();
-        }
-        else
-        {
-            $this->errorCitaAgendada();
+            $paciente = new PacienteModel();
+            $data['cedPaciente'] = $paciente->obtenerCedPaciente($codUser);
+
+            $cita = new CitaModel();
+            
+            if($cita->guardarCita($data))
+            {
+                $this->confirmarCitaAgendada();
+                $message = "Su cita ha sido agendada exitosamente.";
+                $cita->notificarViaEmail($emailUser, $message);
+            }
+            else
+            {
+                $this->errorCitaAgendada();
+            }
         }
 	}
-
-    // Obtener codigo del medico seleccionado en la vista opciones.php
-    public function obtenerCodMedico()
-    {
-        if(isset($_POST['Siguiente'])){
-            $codMedico = $_POST['codMedico'];
-        }
-            return $codMedico;
-    }
-
-    // Obtener fecha seleccionada en la vista fecha.php
-    public function obtenerFecha()
-    {
-        if(isset($_POST["Siguiente"])){
-            $fecha = $_POST['fecha'];
-        }
-            return $fecha;
-    }
-
 
 
     public function reprogramar()
     {
         // Verificar la existencia del parametro codCita 
         if(isset($_GET["codCita"]) && !empty(trim($_GET["codCita"])))
-        $codCita = $cod_cita;
+        $cod_cita = trim($_GET["codCita"]);
 
+        // Data a mostrar de la cita que se quiere reprogramar
+        $cita = new CitaModel();
+        $data = $cita->obtenerData($codCita);
+
+        // Obtener email del usuario logueado 
+        session_start();
+		$emailUser = $_SESSION['emailUser'];
+
+        if($cita->actualizar($cod_cita)){
+            $this->confirmarCitaAgendada();
+            $message = "Su cita ha sido reprogramada exitosamente.";
+            $cita->notificarViaEmail($emailUser, $message);
+        }
+        else{
+            $this->errorCitaAgendada();
+        }
         //colocar aquí vista de agendar cita en el calendario
         require_once('Views/');
 
@@ -74,8 +86,10 @@ class CitaController
             $cod_cita = trim($_GET["codCita"]);
 
             $cita = new CitaModel();
-            if($cita->eliminarCita($cod_cita)){
+            if($cita->eliminar($cod_cita)){
                 $this->confirmarCitaCancelada();
+                $message = "Su cita ha sido cancelada exitosamente.";
+                $cita->notificarViaEmail($emailUser, $message);
             }
             else{
                 $this->errorCitaCancelada();
