@@ -36,8 +36,27 @@ class CitaController
         }
 	}
 
+    // Obtener codigo del medico seleccionado en la vista opciones.php
+    public function obtenerCodMedico()
+    {
+        if(isset($_POST['Siguiente'])){
+            $codMedico = $_POST['codMedico'];
+        }
+            return $codMedico;
+    }
 
-    public function reprogramarCita()
+    // Obtener fecha seleccionada en la vista fecha.php
+    public function obtenerFecha()
+    {
+        if(isset($_POST["Siguiente"])){
+            $fecha = $_POST['fecha'];
+        }
+            return $fecha;
+    }
+
+
+
+    public function reprogramar()
     {
         // Verificar la existencia del parametro codCita 
         if(isset($_GET["codCita"]) && !empty(trim($_GET["codCita"])))
@@ -49,7 +68,7 @@ class CitaController
     }
 
 
-    public function cancelarCita(){
+    public function cancelar(){
         // Verificar la existencia del parametro codCita 
         if(isset($_GET["codCita"]) && !empty(trim($_GET["codCita"]))){
             $cod_cita = trim($_GET["codCita"]);

@@ -11,7 +11,6 @@ $cedula = $nombre = $apellido = $correo = $password = "";
 $cedula_err = $nombre_err = $apellido_err =  $correo_err = $password_err  = "";
  
 // Procesar datos del form  
-
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
     // Validar cedula
@@ -43,28 +42,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
 
     // Validar correo
-    if(empty(trim($_POST["correo"]))){
+    if(empty(trim($_POST["email"]))){
         $correo_err = "Por favor introduzca su correo electronico.";
-    }elseif (!filter_var(trim($_POST["correo"]), FILTER_VALIDATE_EMAIL)){ 
+    }elseif (!filter_var(trim($_POST["email"]), FILTER_VALIDATE_EMAIL)){ 
         $correo_err = "Correo invalido.";
     } else{
-         $correo = trim($_POST["correo"]);
+         $correo = trim($_POST["email"]);
     }
 
 
     // Validar contraseña
-    if(empty(trim($_POST["password"]))){
+    if(empty(trim($_POST["passwd"]))){
         $password_err = "Por favor introduzca la contraseña.";     
-    } elseif(strlen(trim($_POST["password"])) < 6){
+    } elseif(strlen(trim($_POST["passwd"])) < 6){
         $password_err = "La contraseña debe contener al menos 6 caracteres.";
     } else{
-        $password = trim($_POST["password"]);
+        $password = trim($_POST["passwd"]);
     }
     
+    // Si no hay error en los campos entonces registrar el usuario
     if(empty($cedula_err) && empty($nombre_err) && empty($apellido_err) && empty($correo_err) && empty($password_err)){
         $user = new UsuarioModel();
         $paciente = new PacienteModel();
 
+        //verificar si existe 
         if($user->registrarUsuario($tipo, $correo, $password)){
             $codUser = $user->obtenerUltimoCodUser();
             if($paciente->registrarPaciente($cedula, $nombre, $apellido, $codUser)){

@@ -1,9 +1,11 @@
 <?php
 
-/*
+
 $controllers = array(
     'Home' => ['index'],
-    'Cliente'=>['index', 'agregar','guardar', 'confirmar','error']
+    'Login'=>[''],
+    'Register'=>[''],
+    'Cita'=>[''],
 );
 
 if (array_key_exists($controller, $controllers)) {
@@ -25,11 +27,16 @@ function call($controller, $action)
         case 'Home':
             $controller = new HomeController();
             break;
-        case 'Cliente':
-            $controller = new ClienteController();
+        case 'Login':
+            $controller = new LoginController();
             break;
+        case 'Register':
+            $controller = new RegisterController();
+            break;
+        case 'Cita':
+                $controller = new CitaController();
+                break;
         default:
-            # código...
             break;
     }
 
