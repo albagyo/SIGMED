@@ -14,7 +14,6 @@ html, body {
 
 .full-height {
   height: 100%;
-
 }
 
 </style>
@@ -27,8 +26,5 @@ html, body {
 	</header>
   
     
-
-
-
 </body>
 </html>
