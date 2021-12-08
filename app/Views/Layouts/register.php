@@ -29,11 +29,12 @@ html, body {
   </section> 
 
 <form action="" method="POST">
-  <section id="C" style="width: 60%; height: 45%; float: right; text-overflow: inherit;  margin-top: 0%;">
+  <section id="C" style="width: 60%; height: 35%; float: right; text-overflow: inherit;  margin-top: 0%;">
     <div style="padding: 0% 15% 10% 15%;"></p></p>
       <div class="cedula" style=" height:8%;" >
-        <label for="IDdeUsuario" class="form-label">No° de Cédula/Pasaporte</label>
-        <input type="cedula" class="form-control" id="IDdeUsuario" name="cedula">  
+        <label for="IDdeUsuario" class="form-label">No° de Cédula</label>
+        <input type="cedula" class="form-control" id="IDdeUsuario" name="cedula"
+        placeholder="Formato de cédula (x-xxx-xxx)" required>  
       </div>
       <div class="nombre" style=" height:8%;" >
         <label for="Nom" class="form-label">Nombre</label>
@@ -57,7 +58,7 @@ html, body {
   </section>
 </form>
 
-<section id="D" style="width: 60%; height: 10%; text-align: center; float: right; text-overflow: inherit; ">
+<section id="D" style="width: 60%; height: 5%; text-align: center; float: right; text-overflow: inherit; ">
   <a href="login.php">¿Ya tiene cuenta? Inicie sesión </a>
   <style>  {  text-align: center; text-decoration-line: underline; float: left; }    </style>
   </section> 
