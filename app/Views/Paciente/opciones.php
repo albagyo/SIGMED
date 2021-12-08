@@ -17,7 +17,9 @@ html, body {
 
 </head>
 <body>
-
+<header>
+		<?php require_once('C:\xampp\htdocs\SIGMED\app\Views\Layouts\menu.php'); ?>
+	</header>
     
 <div class="row" style=" height:100%">
     <div class="col-md-3 ml-sm-12 col-lg-3 col-xl-2 px-0" style="height:100%; background: #B9FFFF; ">
@@ -26,8 +28,8 @@ html, body {
                 <h2 >Agendar Cita</h2>
             </div>
         </div>
-        <main role="main" class="col-md-12 ml-sm-12 col-lg-12 px-3">
-        <form action="http://localhost/SIGMED/app/Views/Paciente/calendario/fecha.php" method="post">
+        <main role="main" class="col px-3">
+        <form action="controller&action" method="post">
             <div class="mb-3" style="padding: 5% 0%">
                 <label for="SeleccionePoliclinica" class="form-label">Seleccione una Policlínica</label>
                 <!--<select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required></select>-->
@@ -49,12 +51,12 @@ html, body {
                 </select>
             </div>
             
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <a class="btn btn-primary" href="http://localhost/SIGMED/app/Views/Paciente/calendario/fecha.php" role="button" type="submit">Continuar</a>
         </form>
         </main>
     </div>
     <div class="col-md-9 ml-sm-12 col-lg-9 col-xl-10 px-0">
-        <?php require_once('calendario/index.html'); ?>
+        <iframe src="calendario\index.html" style="pointer-events:none; padding: 2%;width: 100%; height: 100%; border: none"></iframe>
     </div>
 </div>
 

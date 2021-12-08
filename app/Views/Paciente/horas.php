@@ -17,7 +17,10 @@ html, body {
 
 </head>
 <body>
-    
+<header>
+		<?php require_once('C:\xampp\htdocs\SIGMED\app\Views\Layouts\menu.php'); ?>
+	</header>
+
 <div class="row" style=" height:100%">
     <div class="col-md-3 ml-sm-12 col-lg-3 col-xl-2 px-0" style="height:100%; background: #B9FFFF; ">
         <div style="display: table; width:100%;  height:8%;" >
@@ -25,7 +28,23 @@ html, body {
                 <h2 >Agendar Cita</h2>
             </div>
         </div>
-
+        <main role="main" class="col px-3">
+        
+        <div class="mb-3" style="padding: 5% 0%">
+            <?php echo 'xxxxxxxxxx' ?>
+        </div>                 
+        <div class="mb-3" style="padding: 5% 0%">
+        <?php echo 'xxxxxxxxxx' ?>
+        </div>
+        <div class="mb-3" style="padding: 5% 0%">
+        <?php echo 'xxxxxxxxxx' ?>
+        </div>
+        <div class="mb-3" style="padding: 5% 0%">
+        <?php echo 'xxxxxxxxxx' ?>
+        </div>
+        
+    
+    </main>
 
  
 

@@ -20,18 +20,19 @@ html, body {
 <body>
 
 <section id="A" style="border-radius: 0px 35px 35px 0px; width: 40%;  height: 100%; text-align: center; color: #f0f8ff ; float: left; background-color: blue; margin-top: 0%;">
+  
   </p></p><h1> Bienvenido a SIGMED </p></p></h1>
-  <img src="doctor.png" alt="sigmed" width="500" height="450"></p></p>
+  <img class="img-fluid" src="doctor.png" alt="sigmed" width="500" height="450"></p></p>
   <p> La salud es la mayor posesión. La alegría es el mayor tesoro.</p>
   </section> 
 
-  <section id="B" style="width: 60%; height: 10%; text-align: center; float: right; text-overflow: inherit;">
+  <section id="B" style="padding: 3% 0% 3% 0%; width: 60%; height: 10%; text-align: center; float: right; text-overflow: inherit;">
   </p></p><h1> INICIO DE SESIÓN</h1></h1>
   </section> 
 
 <form action="http://localhost/SIGMED/app/Views/Paciente/opciones.php" method="POST">
   <section id="C" style=" width: 60%; height: 45%; text-align: left; float: right; text-overflow: inherit; ">
-        <div style="padding: 10% 20% 4% 20%;">
+        <div style="padding: 5% 30% 4% 30%;">
           <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
           <input type="email"  class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp"> 
           <p></p>  <p></p>
@@ -39,7 +40,7 @@ html, body {
           <label for="exampleInputPassword1" class="form-label">Contraseña</label>
           <input type="password" class="form-control" id="exampleInputPassword1" name=passwd>
         </div>
-        <div style="padding: 0% 20% 10% 20%;">
+        <div style="padding: 0% 30% 5% 30%;">
         <div class="d-grid gap-2">
         <input type="submit" class="btn btn-primary" value="Iniciar Sesión">
         </div>
@@ -47,11 +48,11 @@ html, body {
 </form> 
 
 <section id="D" style="width: 60%; height: 10%; text-align: center; float: right; text-overflow: inherit;">
-  <h1> ---------------------------------</h1> </h1></p></p>
+  </p><hr></p>
   </section> 
 
 <section id="E" style="width: 60%; height: 5%; text-align: center; float: right;">
-<div style="padding: 0% 20% 0% 20%;">
+<div style="padding: 0% 30% 0% 30%;">
       <div class="d-grid gap-2">
       <h7> Cree una cuenta nueva</h7>
           <a class="btn btn-success" href="http://localhost/SIGMED/app/Views/Layouts/register.php" role="button">Registrarse</a><p></p> 

@@ -16,14 +16,15 @@
     .container { max-width: 100%; } 
     h1 { line-height: 15px; }
   </style>
-<form action="http://localhost/SIGMED/app/Views/Paciente/horas.php" method="post">
-  <div ng-app="myApp" ng-controller="MyCtrl" class="container" style="padding: 8%; margin: 0px;">
+<form action="#" method="post">
+  <div ng-app="myApp" ng-controller="MyCtrl" class="container" style="padding: 0%; margin: 0px;">
     <div rm-datepicker ng-model="oDate1" rm-config="rmConfig1"></div>
     <br>
     <!--<div>Selected date: {{oDate1}}</div>-->
     <select id="SeleccionePoliclinica" class="form-select" name="fecha" required style="display: none;">  
       <option value="{{oDate1}}">{{oDate1 | date: 'yyyy-MM-dd'}}</option>
-      <input type="submit" value="Continuar">
+      
+
   </div>
 
 </form>
@@ -56,7 +57,7 @@
           format: "yyyy-MM-dd" /* https://docs.angularjs.org/api/ng/filter/date */
         };
 
-        $scope.oDate1 = new Date('2015-12-12');
+        $scope.oDate1 = new Date('2021-12-12');
         $scope.oDate2 = new Date();
       };
       app.controller("MyCtrl", ['$scope', MyCtrl]);

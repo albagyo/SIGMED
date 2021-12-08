@@ -241,7 +241,7 @@
             };
 
             scope.mondayStart = conf.mondayStart;
-            scope.aWeekDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            scope.aWeekDay = ["No Disponible", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "No Disponibles"];
             if (scope.mondayStart) scope.aWeekDay.push(scope.aWeekDay.shift());
 
             scope.aStates = ["decade", "year", "month"];

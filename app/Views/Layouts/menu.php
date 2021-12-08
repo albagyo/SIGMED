@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown" style="justify-content: flex-end">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="fecha.php">Agendar</a>
+                  <a class="nav-link" href="http://localhost/SIGMED\app\Views\Paciente\opciones.php">Agendar</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Policlínica</a>
@@ -19,7 +19,7 @@
                   <a class="nav-link" href="#">Médico</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="MisCitas.php">Mis Citas</a>
+                    <a class="nav-link" href="http://localhost/SIGMED\app\Views\Paciente\MisCitas.php">Mis Citas</a>
                   </li>
                 <!--<li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
