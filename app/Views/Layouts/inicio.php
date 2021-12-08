@@ -19,17 +19,13 @@ html, body {
 </head>
 <body>
 
-  <section id="A" style=" width: 100%;  height: 15%; text-align: center; color: #f0f8ff; float: center; background-color: blue; ">
-  </p></p><h1> SIGMED</h1>
-  </section> 
+<nav class="navbar navbar-dark" style="background-color: #f0f8ff ;">
+        <a class="navbar-brand" href="inicio.php">
+            <img src="doctor.png" width="100%" height="50%" alt="" class="img-thumbnail"
+                style="background-color: #f0f8ff ; border: #f0f8ff ;">
+        </a>
+    </nav>
 
-  <section id="B" style=" width: 50%;  height: 70%; text-align: center;  float: left; ">
-  </p></p><h1> SIGMED</h1>
-  </section> 
-
-  <section id="C" style=" width: 50%;  height: 70%; text-align: center;  float: right; ">
-  </p></p><h1> SIGMED</h1>
-  </section> 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
