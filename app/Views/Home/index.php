@@ -5,5 +5,4 @@
     <div>
         <a href="?controller=Login&&action=index">Iniciar Sesion en el sistema</a>
     </div>
-    <?php require_once('routes.php') ?>
 </main>

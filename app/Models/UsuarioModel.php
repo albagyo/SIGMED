@@ -5,7 +5,7 @@ class UsuarioModel
 
     public function __construct()
     {
-        $this->db = Connect::conectar();
+        $this->db = Conexion::conectar();
     }
 
     //Almacenar en la bd los datos del usuario 
