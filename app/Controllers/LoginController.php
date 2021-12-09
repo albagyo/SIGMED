@@ -1,5 +1,6 @@
 <?php
-require_once "UsuarioModel.php";
+
+require_once ('Models/UsuarioModel.php');
 
 class LoginController
 {

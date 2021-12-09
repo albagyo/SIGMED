@@ -12,11 +12,11 @@ if (array_key_exists($controller, $controllers)) {
     if (in_array($action, $controllers[$controller])) {
         call($controller, $action);
     } else {
-        call('Login', 'index');
+        call('Home', 'index');
     }
-} else {
-    call('Login', 'index');
-}
+    } else {
+        call('Home', 'index');
+    }
 
 function call($controller, $action)
 {
