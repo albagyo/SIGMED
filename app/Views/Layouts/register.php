@@ -28,7 +28,7 @@ html, body {
     <h2> Ingrese los datos para registarse a SIGMED </h2></p></p></h1>
   </section> 
 
-<form action="" method="POST">
+<form action="?controller=Register&&action=registrar" method="POST">
   <section id="C" style="width: 60%; height: 35%; float: right; text-overflow: inherit;  margin-top: 0%;">
     <div style="padding: 0% 15% 10% 15%;"></p></p>
       <div class="cedula" style=" height:8%;" >

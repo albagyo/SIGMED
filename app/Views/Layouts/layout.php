@@ -25,6 +25,12 @@ html, body {
 		<?php require_once('menu.php'); ?>
 	</header>
   
+  <div class="container-fluid">
+        <div class="row">
+		    <?php require_once('routes.php'); ?>
+        </div>
+	</div>
+  
     
 </body>
 </html>

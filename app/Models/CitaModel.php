@@ -4,9 +4,11 @@ require_once "BasedeDatos.php";
 class CitaModel
 {
     private $citas;
+    private $db;
 
     public function __construct()
     {
+        $this->$db = connect::conectar();
         $this->citas = array();
     }
 
@@ -14,7 +16,7 @@ class CitaModel
     {
         $sql = "INSERT INTO cita (fecha, codHora, codMedico, cedPaciente)
                 VALUES ('" .$data['fecha']. "','" .$data['codHora']. "'," .$data['codMedico']. ",'" .$data['cedPaciente']. "');";
-        $consulta = $db->query($sql);
+        $consulta = $this->db->query($sql);
         if($consulta){
             return true;
         } else {
@@ -26,7 +28,7 @@ class CitaModel
     public function actualizar($cod_cita, $fecha, $codHora)
     {
         $sql = "UPDATE cita SET fecha ='".$fecha."', codHora = '".$codHora."' where codCita = ".$cod_cita.";";
-        $consulta = $db->query($sql);
+        $consulta = $this->db->query($sql);
         if($consulta){
             return true;
         } else {
@@ -37,7 +39,7 @@ class CitaModel
     public function eliminar($cod_cita)
     {
         $sql = "DELETE FROM cita where codCita= '".$cod_cita."';";
-        $consulta = $db->query($sql);
+        $consulta = $this->db->query($sql);
         if($consulta){
             return true;
         } else {
@@ -49,7 +51,7 @@ class CitaModel
     public function obtenerData($cod_cita)
     {
         $sql = "select * from cita where codCita = ".$cod_cita.";";
-        $consulta = $db->query($sql);
+        $consulta = $this->db->query($sql);
         return $consulta;
     }
 
@@ -58,22 +60,22 @@ class CitaModel
     public function obtenerCitasPaciente($ced_paciente)
     {
         $sql = "select * from cita where codPaciente = ".$ced_paciente.";";
-        $consulta = $db->query($sql);
+        $consulta = $this->db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
-            $citas[] = $filas;
+            $this->citas[] = $filas;
         }
-        return $citas;
+        return $this->citas;
     }
 
     //obtener citas para la vista del calendario del medico, revisar el getdate()
     public function obtenerCitasMedico($cod_medico, $fecha)
     {
         $sql = "select * from cita where codMedico = ".$cod_medico." and fecha = '".$fecha."';";
-        $consulta = $db->query($sql);
+        $consulta = $this->db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
-            $citas[] = $filas;
+            $this->citas[] = $filas;
         }
-        return $citas;
+        return $this->citas;
     } 
 
     public function notificarViaEmail($email, $message)
@@ -82,11 +84,4 @@ class CitaModel
         mail($email, $subject, $message);
     }
 
-    public function obtenerDatosEmail($cod_cita)
-    {
-        $sql = "SELECT p.emailPaciente FROM paciente as p JOIN cita as c
-                on p.cedPaciente=c.cedPaciente WHERE c.codCita= '".$cod_cita."';";
-        $email = $db->query($sql);
-        return $email;
-    }
 }

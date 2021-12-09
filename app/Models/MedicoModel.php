@@ -1,12 +1,12 @@
 <?php
-require_once "BasedeDatos.php";
-
 class MedicoModel
 {
     private $medicos;
+    private $db;
 
     public function __construct()
     {
+        $this->db = Connect::conectar();
         $this->medicos = array();
     }
 
@@ -16,11 +16,11 @@ class MedicoModel
         $sql = "SELECT nombreMedico, apellidoMedico, codMedico,
                 CONCAT (nombreMedico, ' ', apellidoMedico) as medico 
                 FROM medico;";
-        $consulta = $db->query($sql);
+        $consulta = $this->db->query($sql);
         while ($filas = $consulta->fetch_assoc()) {
-            $medicos[] = $filas;
+            $this->medicos[] = $filas;
         }
-        return $medicos;
+        return $this->medicos;
     }
 
 }

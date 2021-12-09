@@ -3,19 +3,19 @@
 
 $controllers = array(
     'Home' => ['index'],
-    'Login'=>[''],
-    'Register'=>[''],
-    'Cita'=>[''],
+    'Login'=>['index', 'acceder'],
+    'Register'=>['index', 'registrar'],
+    'Cita'=>['index', 'agendarCitaPaciente', 'reprogramar', 'cancelar']
 );
 
 if (array_key_exists($controller, $controllers)) {
     if (in_array($action, $controllers[$controller])) {
         call($controller, $action);
     } else {
-        call('Home', 'index');
+        call('Login', 'index');
     }
 } else {
-    call('Home', 'index');
+    call('Login', 'index');
 }
 
 function call($controller, $action)

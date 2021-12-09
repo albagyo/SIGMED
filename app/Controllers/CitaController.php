@@ -98,6 +98,19 @@ class CitaController
     }
 
 
+    public function mostrarMisCitas(){
+        $cita = new CitaModel();
+        $paciente = new PacienteModel();
+
+        session_start(); 
+        $codUser = $_SESSION['id'];
+        $ced_paciente = $paciente->obtenerCedPaciente($codUser);
+
+        $citas = $cita->obtenerCitasPaciente($ced_paciente);
+        require_once ("colocar aquí vista de Mis citas");
+    }
+
+
 
     //CONFIRMAR
     //Confirmar que la cita se ha agendado exitosamente

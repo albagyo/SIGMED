@@ -30,7 +30,7 @@ html, body {
   </p></p><h1> INICIO DE SESIÓN</h1></h1>
   </section> 
 
-<form action="http://localhost/SIGMED/app/Views/Paciente/opciones.php" method="POST">
+<form action="?controller=Login&&action=acceder"  method="POST">
   <section id="C" style=" width: 60%; height: 45%; text-align: left; float: right; text-overflow: inherit; ">
         <div style="padding: 5% 30% 4% 30%;">
           <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
@@ -57,8 +57,8 @@ html, body {
       <h7> Cree una cuenta nueva</h7>
           <a class="btn btn-success" href="http://localhost/SIGMED/app/Views/Layouts/register.php" role="button">Registrarse</a><p></p> 
       </div>
-          </div>
-    </section>
+      </div>
+    </section> 
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

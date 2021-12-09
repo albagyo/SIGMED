@@ -80,10 +80,14 @@ class RegisterController
                 $paciente = new PacienteModel();
 
                 //verificar si existe 
-                if($user->registrarUsuario($tipo, $correo, $password)){
-                    $codUser = $user->obtenerUltimoCodUser();
-                    if($paciente->registrarPaciente($cedula, $nombre, $apellido, $codUser)){
-                        require_once('Views/Paciente/calendario/agendar.php');
+                if(!$user->verificarUsuario($correo)){
+                    if(!$paciente->verificarPaciente($cedula)){
+                        if($user->registrarUsuario($tipo, $correo, $password)){
+                            $codUser = $user->obtenerUltimoCodUser();
+                            if($paciente->registrarPaciente($cedula, $nombre, $apellido, $codUser)){
+                                require_once('Views/Paciente/calendario/agendar.php');
+                            }
+                        }
                     }
                 }
             }

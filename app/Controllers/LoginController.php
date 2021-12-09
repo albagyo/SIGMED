@@ -1,6 +1,4 @@
 <?php
-// Conexion a la base de datos
-require_once "BasedeDatos.php";
 require_once "UsuarioModel.php";
 
 class LoginController
@@ -53,7 +51,7 @@ class LoginController
                 $existe_usuario = $user->verificarUsuario($email);
 
                 if(!$existe_usuario){
-                    $login_err = "Este orreo electronico no es valido.";
+                    $login_err = "Este correo electronico no es valido.";
                 }
                 else {
                 // Si el usuario existe entonces 
