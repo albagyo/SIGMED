@@ -28,6 +28,7 @@ class LoginController
         $email = $password = "";
         $email_err = $password_err = $login_err = "";
         
+        var_dump($_SERVER["REQUEST_METHOD"]);
         // Processing form data when form is submitted
         if($_SERVER["REQUEST_METHOD"] == "POST"){
         
@@ -58,26 +59,29 @@ class LoginController
                 // Si el usuario existe entonces 
                     // Obtener contraseña correspondiente al usuario
                     $hashed_password = $user->obtenerHashedPassword($email);
-
+                    
                     // Verificar contraseña
-                    if(password_verify($password, $hashed_password)){
-                        // si la contraseña existe entonces iniciar una nueva sesion
-                        session_start();
+                    if($password === $hashed_password){
+                        
                                     
                         // Guardar informacion de usuario en variables SESSION
                         $codUser = $user->obtenerCodUser($email);
+                        var_dump($codUser, $email);
                         $_SESSION["loggedin"] = true;
                         $_SESSION["id"] = $codUser;
-                        $_SESSION["emailUser"] = $email;                            
+                        //$_SESSION["emailUser"] = $email;                            
                         
                         // Redireccionar a la pagina de agendar
-                        header("location: opciones.php");
+                        require_once("Views/Home/index.php");
                     } else{
                         // Password is not valid, display a generic error message
                         $login_err = "La contraseña es incorrecta.";
                         }
                 }             
             }
+        }
+        else{
+            require_once("Views/Home/index.php");
         }
     }
 }

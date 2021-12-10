@@ -36,7 +36,7 @@ html, body {
           <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
           <input type="email"  class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp"> 
           <p></p>  <p></p>
-
+          
           <label for="exampleInputPassword1" class="form-label">Contraseña</label>
           <input type="password" class="form-control" id="exampleInputPassword1" name=passwd>
         </div>
@@ -55,7 +55,7 @@ html, body {
 <div style="padding: 0% 30% 0% 30%;">
       <div class="d-grid gap-2">
       <h7> Cree una cuenta nueva</h7>
-          <a class="btn btn-success" href="http://localhost/SIGMED/app/Views/Layouts/register.php" role="button">Registrarse</a><p></p> 
+          <a class="btn btn-success" href="?controller=Register&&action=index" role="button">Registrarse</a><p></p> 
       </div>
       </div>
     </section> 

@@ -41,14 +41,14 @@ class UsuarioModel
     public function obtenerHashedPassword($emailUser){
         $sql = "SELECT passwordUser FROM usuario WHERE emailUser = '" . $emailUser . "';";
         $consulta = $this->db->query($sql);
-        return $consulta;
+        $result = $consulta->fetch_row()[0];
+        return $result;
     }
 
     public function obtenerCodUser($emailUser){
         $sql = "SELECT codUser FROM usuario WHERE emailUser = '" . $emailUser . "';";
         $consulta = $this->db->query($sql);
-        return $consulta;
+        $result = $consulta->fetch_row()[0];
+        return $result;
     }
-
-
 }

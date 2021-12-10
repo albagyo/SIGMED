@@ -10,6 +10,7 @@ class HomeController
 
     function index()
     {
+        session_start();
         require_once('Views/Home/index.php');
     }
 }
