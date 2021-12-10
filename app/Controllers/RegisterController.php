@@ -1,6 +1,6 @@
 <?php
 //Conexión a la base de datos
-require_once "BasedeDatos.php";
+require_once "db/BasedeDatos.php";
 //Modelos 
 require_once('Models/PacienteModel.php');
 require_once('Models/UsuarioModel.php');

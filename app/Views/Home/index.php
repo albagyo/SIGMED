@@ -18,7 +18,14 @@ html, body {
 </head>
 <body>
 <section id="A" style="border-radius: 100px 100px 100px 100px; width: 100%;  height: 100%; text-align: center; color: #f0f8ff ; float: left; background-color: blue; margin-top: 0%;">
-  
+  <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"]){
+      echo $_SESSION["loggedin"];
+      echo $_SESSION["id"] ;
+  }
+      else{
+          echo "hola";
+      }
+  ?>
   </p></p><h1> Bienvenido a SIGMED </p></p></h1>
   <div class="container" style="height: 35%;">
   <img class="img-fluid" src="../Layouts/doctor.png" alt="sigmed" width="40%" height="30%">
@@ -27,10 +34,6 @@ html, body {
   <a class="btn btn-secondary" href="#" role="button">Registrarse</a></p>
 </div>
   
-
-
-
-     <?php require_once('routes.php') ?>
   </section> 
    
     
