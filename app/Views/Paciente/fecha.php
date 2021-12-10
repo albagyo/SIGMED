@@ -34,14 +34,7 @@ html, body {
                 <label for="SeleccionePoliclinica" class="form-label">Seleccione una Policlínica</label>
                 <!--<select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required></select>-->
                 <select id="SeleccionePoliclinica" class="form-select" name="nombrePoliclinica" required>  
-                <?php 
-                    require_once "BasedeDatos.php";
-                    $sql = "SELECT * FROM policlinica";
-                    $policlinicas = $db->query($sql);
-                    while ($filas = $policlinicas->fetch_assooloc()):;
-                ?>
-                <option value=""><?php echo $filas;?></option>               
-                <?php endwhile;?> 
+                <option>Disabled select</option>
                 </select>
             </div>                 
             <div class="mb-3" style="padding: 5% 0%">
